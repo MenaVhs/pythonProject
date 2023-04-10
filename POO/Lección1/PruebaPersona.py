@@ -6,3 +6,6 @@ persona.mostrar_detalle()
 # Destructores, es un recolector de basura
 print('Eliminación de objetos'.center(50, '-'))
 del persona
+
+####
+print('ésta sólo es prueba de branch Pruebas'.center(60,'*'))
