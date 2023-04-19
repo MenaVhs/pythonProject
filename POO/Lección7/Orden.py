@@ -30,6 +30,12 @@ class Orden:
         for producto in self.productos:
             total += producto.precio # valor parcial
         return total
+    @staticmethod
+    def suma_ordenes(*args):
+        total_ordenes = 0
+        for arg in args:
+            total_ordenes += arg
+        return total_ordenes
 
     def __str__(self):
         productos_str = ''# Almaceno de manera temporal la lista producto
@@ -43,4 +49,6 @@ if __name__ == '__main__':
     productos1 = [producto1, producto2]
     orden1 = Orden(productos1)
     print(orden1)
+
+    print(Orden.suma_ordenes(orden1.calcular_total(), orden1.calcular_total()))
 
