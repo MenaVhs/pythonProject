@@ -35,7 +35,7 @@ class Orden:
         productos_str = ''# Almaceno de manera temporal la lista producto
         for producto in self.productos:
             productos_str += producto.__str__() + ' | ' # símbolo de pipe
-        return f'Orden: {self.id_orden}, \nProductos: {productos_str}'
+        return f'Orden: {self.id_orden}, \nProductos: {productos_str}. \nTotal: {Orden.calcular_total(self)}'
 
 if __name__ == '__main__':
     producto1 = Producto('Camisa desde Orden', 100.00)
