@@ -1,4 +1,4 @@
-from DispositivoEntrada import Dispositivo_Entrada
+from mundo_pc.dispositivoEntrada import Dispositivo_Entrada
 
 
 class Teclado(Dispositivo_Entrada):
@@ -9,8 +9,8 @@ class Teclado(Dispositivo_Entrada):
         Teclado.contador += 1
         return Teclado.contador
     def __init__(self, tipo_entrada, marca):
-        super().__init__(tipo_entrada, marca)
         self.__id_teclado = Teclado.contador_teclados()
+        super().__init__(tipo_entrada, marca)
 
     @property
     def id_teclado(self):

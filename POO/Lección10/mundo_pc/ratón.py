@@ -1,4 +1,4 @@
-from DispositivoEntrada import Dispositivo_Entrada
+from mundo_pc.dispositivoEntrada import Dispositivo_Entrada
 
 
 class Raton(Dispositivo_Entrada):
@@ -6,11 +6,11 @@ class Raton(Dispositivo_Entrada):
     @staticmethod
     def contador_ratones():
         Raton.contador += 1
-        return  Raton.contador
+        return Raton.contador
         # print(f'Contador {Raton.contador}')
     def __init__(self, tipo_entrada, marca):
-        super().__init__(tipo_entrada, marca)
         self.__id_raton = Raton.contador_ratones()
+        super().__init__(tipo_entrada, marca) # al ser atributos de la clase padre, la hija puede acceder aunque sean protegidos (_marca)
     @property
     def id_raton(self):
         return self.__id_raton
